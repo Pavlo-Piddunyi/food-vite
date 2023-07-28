@@ -56,8 +56,6 @@
     gap: 40px;
   }
 
-  .header-item {}
-
   .header-link:hover,
   .header-link:focus {
     color: var(--hover-focus-cl);
@@ -87,7 +85,6 @@
     transition: color var(--anim);
   }
 
-  .header-address {}
 
   .header-contact-list {
     display: flex;
