@@ -1,21 +1,129 @@
 .header {
-  padding: 20px 0;
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.nav-list {
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  justify-content: space-between;
 }
 
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+.header-logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-cian-cl);
+  margin-right: 76px;
+}
+
+.header-studio {
+  font-family: var(--secondary-font);
+  color: var(--link-grey-cl);
+}
+
+@media only screen and (max-width: 767px) {
+  .header-list {
+    display: none;
+  }
+
+  .header-contact-list {
+    display: none;
+  }
+}
+
+/* Tablet screen */
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 120px;
+  }
+
+  .header-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header-item {}
+
+  .header-link:hover,
+  .header-link:focus {
+    color: var(--hover-focus-cl);
+    transition: color var(--anim);
+  }
+
+  .header-link.active::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    bottom: -1px;
+    left: 0;
+  }
+
+  .header-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color var(--anim);
+  }
+
+  .header-address {}
+
+  .header-contact-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contact-link:hover,
+  .header-contact-link:focus {
+    color: var(--hover-focus-cl);
+    transition: color var(--anim);
+  }
+
+  .header-contact-link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--body-grey-cl);
+    transition: color var(--anim);
+  }
+}
+
+/* Desktop screen */
+@media only screen and (min-width: 1158px) {
+  .header-contact-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
