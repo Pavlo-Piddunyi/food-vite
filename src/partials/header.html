@@ -1,43 +1,77 @@
-<header class="header">
-  <div class="header-container container">
-    <nav class="header-nav">
-      <a class="header-logo link" href="./index.html"
-        >Web<span class="header-studio">Studio</span></a
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container header-container">
+    <div class="header-logotype">
+      <a
+        class="header-logo"
+        href="./index.html"
+        aria-label="Yacht Adventure logo"
       >
-      <ul class="header-list list">
-        <li class="header-item">
-          <a class="header-link link active" href="./index.html">Studio</a>
+        <svg class="header-icon" width="16" height="18">
+          <use href="./public/sprite.svg#logo-site"></use>
+        </svg>
+        <p class="logo-text">yaht adventure</p>
+      </a>
+    </div>
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">ABOUT</a>
         </li>
-        <li class="header-item">
-          <a class="header-link link" href="./portfolio.html">Portfolio</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#yahts">YAHTS</a>
         </li>
-        <li class="header-item">
-          <a class="header-link link" href="">Contacts</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#reviews">REVIEWS</a>
         </li>
       </ul>
     </nav>
-    <address class="header-address">
-      <ul class="header-contact-list list">
-        <li class="header-contact">
-          <a class="header-contact-link" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="header-contact">
-          <a class="header-contact-link" href="tel:+110001111111"
-            >+11 (000) 111-11-11</a
-          >
-        </li>
-      </ul>
-    </address>
     <button
-      class="menu-toggle js-open-menu"
+      class="menu-toggle js-open-menu scrollLockBtnBurger"
       aria-expanded="false"
       aria-controls="mobile-menu"
+      aria-label="mobile-menu"
     >
-      <svg class="menu-toggle-icon" width="32" height="22">
-        <use href="./images/icons.svg#burger"></use>
+      <svg class="menu-icon" width="24" height="24">
+        <use href="./public/sprite.svg#vector-menu"></use>
       </svg>
     </button>
   </div>
 </header>
+<!-- Mobile menu -->
+<div class="mobile-menu-container js-menu-container is-open" id="mobile-menu">
+  <div class="mobile-menu-header container">
+    <div class="modal-menu-logo">
+      <a
+        class="header-logo"
+        href="./index.html"
+        aria-label="Yacht Adventure logo"
+      >
+        <svg class="header-icon" width="16" height="18">
+          <use href="./public/sprite.svg#logo-site"></use>
+        </svg>
+        <p class="logo-text">yaht adventure</p>
+      </a>
+    </div>
+    <button
+      class="mobile-menu-btn-close hamburger scrollUnlockBtnBurger js-close-menu"
+      type="button"
+      aria-label="close modal btn"
+    >
+      <svg class="close-icon" width="24" height="24" aria-label="Close button">
+        <use href="./public/sprite.svg#menu-close"></use>
+      </svg>
+    </button>
+  </div>
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+      <a class="mobile-menu-link scroll-unlock" href="#about">ABOUT</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a class="mobile-menu-link scroll-unlock" href="#yahts">YAHTS</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a class="mobile-menu-link scroll-unlock" href="#reviews">REVIEWS</a>
+    </li>
+  </ul>
+</div>

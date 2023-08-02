@@ -1,0 +1,41 @@
+.btn-up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transform: translateY(0);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--normal-state);
+    transition: transform 300ms, opacity 300ms, visibility 300ms;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-up {
+        width: 68px;
+        height: 68px;
+    }
+}
+
+.btn-up.d-none {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(100%);
+}
+
+.arrow-up {
+    fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+    .arrow-up {
+        width: 16px;
+        height: 30px;
+    }
+}
